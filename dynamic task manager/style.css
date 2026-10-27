@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #76aee6;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 30px auto;
+    background:whitesmoke;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #083fb4;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #7b8492;
+    margin-bottom: 25px;
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #3c303d;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #b8bcc7;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.filters button {
+    flex: 1;
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.filters button:hover {
+    background: #bfdbfe;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.task-info {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-info small {
+    display: block;
+    margin-top: 7px;
+    color: #64748b;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.task-actions button {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.task-actions .delete-btn {
+    background: #dc2626;
+}
+
+.task-actions .edit-btn {
+    background: #059669;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .filters {
+        gap: 5px;
+    }
+
+    .filters button {
+        padding: 10px 5px;
+        font-size: 13px;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
